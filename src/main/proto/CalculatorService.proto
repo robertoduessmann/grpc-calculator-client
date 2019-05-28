@@ -1,0 +1,16 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.calculator;
+
+service CalculatorService {
+  rpc sum (SumRequest) returns (SumResponse);
+}
+
+message SumRequest {
+  double num1 = 1;
+  double num2 = 2;
+}
+
+message SumResponse {
+  double result = 1;
+}
